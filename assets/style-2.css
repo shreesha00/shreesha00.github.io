@@ -79,6 +79,25 @@ a:hover {
 
 }
 
+.news-item {
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.news-title {
+    font-weight: 400;
+    color: #111;
+}
+
+.date {
+    font-size: 9pt;
+    color: #777;
+    display: block;
+    padding-top: 4px;
+}
+
 /* .thisauthor {
     color:#111;
     text-decoration: underline;
