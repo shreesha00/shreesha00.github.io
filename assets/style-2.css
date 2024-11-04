@@ -116,6 +116,11 @@ a:hover {
     text-decoration: underline;
 }
 
+.award {
+    color: #cc3333;
+    font-weight: bold;
+}
+
 /* .thisauthor {
     color:#111;
     text-decoration: underline;
