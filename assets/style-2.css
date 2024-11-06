@@ -121,6 +121,12 @@ a:hover {
     font-weight: bold;
 }
 
+.footnote {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+}
+
 /* .thisauthor {
     color:#111;
     text-decoration: underline;
