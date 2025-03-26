@@ -42,12 +42,19 @@
             </div>
             <div class="col-md-8 pt-5 about">
                 <p>I am a first-year PhD student at the <a href="https://cs.illinois.edu/">University of Illinois at Urbana-Champaign</a>, where I work with <a href="https://aishwaryaganesan.github.io/">Aishwarya Ganesan</a> and <a href="https://ramalagappan.github.io/">Ram Alagappan</a> at the <a href="https://dassl-uiuc.github.io/">DASSL Lab, UIUC</a>. Broadly, I am interested in distributed systems, with a focus on <em>designing and building</em> high-performance systems tailored for the modern datacenter environment. </p>
-                <p>Lately, I have been working on <em>shared logs</em>, a powerful abstraction that simplifies building a wide range of distributed applications. My research aims to reduce the high latencies inherent in traditional shared log architectures.</p>
+                <p>Lately, I have been working on <em>shared logs</em>, a powerful abstraction that simplifies building a wide range of distributed applications. My recent research (see <a href="#speclog">SpecLog</a>, <a href="#lazylog">LazyLog</a>) aims to overcome the high latencies inherent in traditional shared log architectures.</p>
                 <p>In the past, I interned at the systems group at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research India</a> where I worked with <a href="https://www.microsoft.com/en-us/research/people/akashl/">Dr. Akash Lal</a> on applying concurrency testing techniques on production-scale distributed systems. </p>
-                <p>I graduated with a Dual Degree (Bachelors &amp; Masters) in CSE from <a href="http://www.cse.iitm.ac.in/">IIT Madras</a>, where I worked with <a href="https://kartiknagar.github.io/">Prof. Kartik Nagar</a> on cutoff-based techniques for verifying distributed protocols.</p>
+                <p>I graduated with a Dual Degree (Bachelors and Masters) in CSE from <a href="http://www.cse.iitm.ac.in/">IIT Madras</a>, where I worked with <a href="https://kartiknagar.github.io/">Prof. Kartik Nagar</a> on cutoff-based techniques for verifying distributed protocols.</p>
                 
                 <!-- News Section -->
                 <p class="header pt-5">News</p>
+
+                <div class="py-2">
+                    <div class="news-item my-2 pl-2">
+                        <span class="news-title">SpecLog accepted at OSDI'25</span>
+                        <span class="date">March 2025</span>
+                    </div>
+                </div>
 
                 <div class="py-2">
                     <div class="news-item my-2 pl-2">
@@ -56,16 +63,25 @@
                     </div>
                 </div>
 
-                <div class="py-2">
+                <!-- <div class="py-2">
                     <div class="news-item my-2 pl-2">
                     <span class="news-title">Received travel grant to attend SOSP'24</span>
                         <span class="date">October 2024</span>
                     </div>
-                </div>
+                </div> -->
 
 
                  <p class="header pt-5">Publications</p>
-                 <div class="py-2">
+                <div class="py-2" id="speclog">
+                    <p class="paper my-2 pl-2">
+                        <span class="papertitle">Low End-to-End Latency atop a Speculative Shared Log with Fix-Ante Ordering*</span><br>
+                        <span class="thisauthor">Shreesha G. Bhat</span>, Tony Hong, Xuhao Luo, Jiyu Hu, Aishwarya Ganesan, Ramnatthan Alagappan<br>
+                        <span class="conf"><a href="https://www.usenix.org/conference/osdi25">OSDI'25</a> | Operating Systems Design and Implementation</span><br>
+                        <span class="footnote">*to appear</span>
+                    </p>
+                </div>
+
+                 <div class="py-2" id="lazylog">
                     <p class="paper my-2 pl-2">
                         <span class="papertitle">LazyLog: A New Shared Log Abstraction for Low-Latency Applications</span><br>
                         Xuhao Luo, <span class="thisauthor">Shreesha G. Bhat*</span>, Jiyu Hu*, Ramnatthan Alagappan, Aishwarya Ganesan<br>
