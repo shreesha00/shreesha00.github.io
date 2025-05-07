@@ -3,11 +3,11 @@ const fontname = "CMU Sans Serif";
 const fontweights = [400, 700];
 
 // Color properties
-const basecolor = "#777";  // Grey for main text
-const accentcolor = "#0000CD";  // Blue for paper titles
+const basecolor = "#000000";  // Black for main text
+const accentcolor = "#000000";  // Black for paper titles
 const highlightcolor = "#000000";  // Black for headers
 const backgroundcolor = "#fff";
-const menucolor = "#777";  // Grey for menu items
+const menucolor = "#000000";  // Black for menu items
 const linkcolor = "#0000CD";  // Blue for hyperlinks
 
 // Body properties
@@ -28,8 +28,8 @@ const headerdecoration = "none";
 const namefontsize = "23pt";
 
 // Publication properties
-const ptitlefontsize = bodyfontsize;
-const ptitleweight = bodyfontweight;
+const ptitlefontsize = "15pt";  // Slightly larger than body font
+const ptitleweight = 700;  // Bold weight
 const ptitledecoration = "none";
 const ptitlestyle = "normal";
 
