@@ -1,83 +1,56 @@
 // Initialize font properties
-const fontname = "Ubuntu";
-const fontweights = [300, 400]
+const fontname = "CMU Sans Serif";
+const fontweights = [400, 700];
 
 // Color properties
-const basecolor = "#777";
-const accentcolor = "#0000CD";
-const highlightcolor = "#111";
-
-// const basecolor = "#888";
-// const accentcolor = "#222";
-// const highlight = "#111";
+const basecolor = "#777";  // Grey for main text
+const accentcolor = "#0000CD";  // Blue for paper titles
+const highlightcolor = "#000000";  // Black for headers
+const backgroundcolor = "#fff";
+const menucolor = "#777";  // Grey for menu items
+const linkcolor = "#0000CD";  // Blue for hyperlinks
 
 // Body properties
 const bodyfontweight = 300;
-const bodyfontsize = "12pt";
-const backgroundcolor = "#fff";
+const bodyfontsize = "14pt";
 
 // Link properties
-const acolor = accentcolor;
+const acolor = linkcolor;
 const adecoration = "none";
-// const ahovercolor = accentcolor;
-// const ahoverduration = "0.3s";
-// const ahoverdecoration = "none"; //none, underline, overline, dotted, color (https://www.w3schools.com/cssref/pr_text_text-decoration.asp)
 
 // Menu properties
-const menucolor = basecolor;
-const menufontsize = "14pt";
+const menufontsize = "16pt";
 const menudecoration = "none";
-// const menuhover = accentcolor;
-// const menuhoverduration = "0.3s";
-// const menuhoverdecoration = "none"; //none, underline, overline, dotted, color (https://www.w3schools.com/cssref/pr_text_text-decoration.asp)
 
 // Header properties
-const headercolor = highlightcolor;
 const headerfontsize = "18pt";
 const headerdecoration = "none";
-const namecolor = highlightcolor;
 const namefontsize = "23pt";
 
-
 // Publication properties
-const ptitlecolor = accentcolor;
 const ptitlefontsize = bodyfontsize;
 const ptitleweight = bodyfontweight;
 const ptitledecoration = "none";
 const ptitlestyle = "normal";
 
-const authorcolor = accentcolor;
 const authorweight = bodyfontweight;
 const authordecoration = "none";
 const authorstyle = "normal";
 
-const selfcolor = highlightcolor;
 const selfweight = bodyfontweight;
 const selfdecoration = "none";
 const selfstyle = "normal";
 
-const tagcolor = accentcolor;
 const tagweight = bodyfontweight;
 const tagdecoration = "none";
 const tagstyle = "normal";
 
-const insttitlecolor = highlightcolor;
 const insttitlesize = "12px";
-const instyearcolor = accentcolor;
 const instyearsize = "11px";
 
-//     .institution {
-//             font - size: 12px;
-//             color: #222;
-//         }
-//   .years {
-//             font - size: 11px;
-//             color: #888;
-//         }
-
-// Works for sans serif, change otherwise
-$("head").append("<link href='https://fonts.googleapis.com/css2?family=" + fontname + ":wght@" + fontweights.join(';') + "&display=swap' rel='stylesheet' type='text/css'>");
-$("body").css("font-family", fontname);
+// Works for sans serif font
+$("head").append("<style>@font-face { font-family: 'CMU Sans Serif'; src: url('assets/fonts/cmunss.ttf') format('truetype'); font-weight: 400; font-style: normal; } @font-face { font-family: 'CMU Sans Serif'; src: url('assets/fonts/cmunsx.ttf') format('truetype'); font-weight: 700; font-style: normal; }</style>");
+$("body").css("font-family", "'CMU Sans Serif', 'Computer Modern', 'Arial', sans-serif");
 
 $("body").css("color", basecolor);
 $("body").css("font-weight", bodyfontweight);
@@ -91,24 +64,40 @@ $(".menulink").css("color", menucolor);
 $(".menulink").css("font-size", menufontsize);
 $(".menulink").css("text-decoration", menudecoration);
 
-$(".header").css("color", headercolor);
+$(".header").css("color", highlightcolor);
 $(".header").css("font-size", headerfontsize);
 $(".header").css("text-decoration", headerdecoration);
-$(".name").css("color", namecolor);
+$(".name").css("color", highlightcolor);
 $(".name").css("font-size", namefontsize);
 
-$(".papertitle").css("color", ptitlecolor);
+$(".papertitle").css("color", accentcolor);
 $(".papertitle").css("font-size", ptitlefontsize);
 $(".papertitle").css("font-weight", ptitleweight);
 $(".papertitle").css("text-decoration", ptitledecoration);
 $(".papertitle").css("font-style", ptitlestyle);
 
-$(".thisauthor").css("color", selfcolor);
+$(".thisauthor").css("color", accentcolor);
 $(".thisauthor").css("font-weight", selfweight);
 $(".thisauthor").css("text-decoration", "underline");
 $(".thisauthor").css("font-style", selfstyle);
 
-$(".institution").css("color", insttitlecolor);
+$(".institution").css("color", highlightcolor);
 $(".institution").css("font-size", insttitlesize);
-$(".years").css("color", instyearcolor);
+$(".years").css("color", basecolor);
 $(".years").css("font-size", instyearsize);
+
+// Additional styles for news section
+$(".news-item").css("color", basecolor);
+$(".news-date").css("color", basecolor);
+$(".news-content").css("color", basecolor);
+$(".news-title").css("color", basecolor);
+$(".news-header").css("color", highlightcolor);
+
+// Additional styles for service section
+$(".service-item").css("color", basecolor);
+$(".service-title").css("color", basecolor);
+$(".service-org").css("color", basecolor);
+$(".service-date").css("color", basecolor);
+$(".service-description").css("color", basecolor);
+$(".service-role").css("color", basecolor);
+$(".service-header").css("color", highlightcolor);
