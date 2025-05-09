@@ -3,11 +3,11 @@ const fontname = "CMU Sans Serif";
 const fontweights = [400, 700];
 
 // Color properties
-const basecolor = "#000000";  // Black for main text
-const accentcolor = "#000000";  // Black for paper titles
-const highlightcolor = "#000000";  // Black for headers
+const basecolor = "#333333";  // Lighter black for main text
+const accentcolor = "#000000";  // Pure black for paper titles
+const highlightcolor = "#000000";  // Pure black for headers
 const backgroundcolor = "#fff";
-const menucolor = "#000000";  // Black for menu items
+const menucolor = "#333333";  // Lighter black for menu items
 const linkcolor = "#0000CD";  // Blue for hyperlinks
 
 // Body properties
