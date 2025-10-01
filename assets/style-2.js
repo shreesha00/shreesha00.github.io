@@ -101,3 +101,47 @@ $(".service-date").css("color", basecolor);
 $(".service-description").css("color", basecolor);
 $(".service-role").css("color", basecolor);
 $(".service-header").css("color", highlightcolor);
+
+// GitHub Stars functionality
+function fetchGitHubStars(repoUrl, elementId) {
+    // Extract owner and repo from GitHub URL
+    const match = repoUrl.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+    if (!match) return;
+    
+    const owner = match[1];
+    const repo = match[2];
+    
+    // Use GitHub API to fetch repository information
+    fetch(`https://api.github.com/repos/${owner}/${repo}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const starsCount = data.stargazers_count;
+            const starsElement = document.getElementById(elementId);
+            if (starsElement) {
+                starsElement.innerHTML = `★ ${starsCount}`;
+                starsElement.style.display = 'inline';
+            }
+        })
+        .catch(error => {
+            console.log('Error fetching GitHub stars:', error);
+            // Hide the stars element if there's an error
+            const starsElement = document.getElementById(elementId);
+            if (starsElement) {
+                starsElement.style.display = 'none';
+            }
+        });
+}
+
+// Fetch stars for each repository when the page loads
+$(document).ready(function() {
+    // Fetch stars for SpecLog artifact
+    fetchGitHubStars('https://github.com/dassl-uiuc/speclog-artifact', 'speclog-stars');
+    
+    // Fetch stars for LazyLog artifact
+    fetchGitHubStars('https://github.com/dassl-uiuc/LazyLog-Artifact', 'lazylog-stars');
+});

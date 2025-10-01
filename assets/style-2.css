@@ -127,6 +127,18 @@ a:hover {
     margin-top: 5px;
 }
 
+/* GitHub Stars styling */
+.github-stars {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 5px;
+    display: none; /* Initially hidden, shown when data loads */
+}
+
+.github-stars:hover {
+    color: #333;
+}
+
 /* .thisauthor {
     color:#111;
     text-decoration: underline;
