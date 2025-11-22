@@ -139,6 +139,26 @@ a:hover {
     color: #333;
 }
 
+/* Template Credit styling */
+.template-credit {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.template-credit a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.template-credit a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
 /* .thisauthor {
     color:#111;
     text-decoration: underline;
