@@ -139,6 +139,9 @@ function fetchGitHubStars(repoUrl, elementId) {
 
 // Fetch stars for each repository when the page loads
 $(document).ready(function() {
+    // Fetch stars for LDC artifact
+    fetchGitHubStars('https://github.com/dassl-uiuc/Logically-Disaggregated-Caches', 'ldc-stars');
+
     // Fetch stars for SpecLog artifact
     fetchGitHubStars('https://github.com/dassl-uiuc/speclog-artifact', 'speclog-stars');
     
