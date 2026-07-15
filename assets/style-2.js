@@ -139,6 +139,12 @@ function fetchGitHubStars(repoUrl, elementId) {
 
 // Fetch stars for each repository when the page loads
 $(document).ready(function() {
+    // Fetch stars for AgileLog artifact
+    fetchGitHubStars('https://github.com/dassl-uiuc/AgileLog-Proto', 'agilelog-stars');
+
+    // Fetch stars for MEGALON artifact
+    fetchGitHubStars('https://github.com/dassl-uiuc/MEGALON-artifact', 'megalon-stars');
+
     // Fetch stars for LDC artifact
     fetchGitHubStars('https://github.com/dassl-uiuc/Logically-Disaggregated-Caches', 'ldc-stars');
 
