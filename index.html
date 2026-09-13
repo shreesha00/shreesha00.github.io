@@ -17,16 +17,61 @@
     <link rel="stylesheet" href="assets/style-2.css">
       
     <title>Shreesha G. Bhat</title>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XFXKHL5JT"></script>
+  <!-- Google Analytics: visit ?analytics=off once in each browser to opt out. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function () {
+      var measurementId = 'G-0XFXKHL5JT';
+      var preferenceKey = 'analytics-opt-out';
+      var url = new URL(window.location.href);
+      var preference = url.searchParams.get('analytics');
+      var changingPreference = preference === 'off' || preference === 'on';
+      var optedOut = preference === 'off';
+      var preferenceSaved = false;
 
-    gtag('config', 'G-0XFXKHL5JT');
+      try {
+        if (changingPreference) {
+          window.localStorage.setItem(preferenceKey, optedOut ? 'true' : 'false');
+          preferenceSaved = true;
+        } else {
+          optedOut = window.localStorage.getItem(preferenceKey) === 'true';
+        }
+      } catch (error) {
+        // An explicit opt-out still applies to this visit if storage is blocked.
+      }
+
+      window['ga-disable-' + measurementId] = optedOut;
+
+      if (changingPreference) {
+        if (preferenceSaved) {
+          url.searchParams.delete('analytics');
+          try {
+            window.history.replaceState(window.history.state, '', url.href);
+          } catch (error) {
+            // Keeping the preference in the URL is safe if history is unavailable.
+          }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+          var status = optedOut ? 'disabled' : 'enabled';
+          window.alert(preferenceSaved
+            ? 'Google Analytics is ' + status + ' for this browser. Your preference has been saved.'
+            : 'Google Analytics is ' + status + ' for this visit only. Your browser blocked saving the preference.');
+        });
+      }
+
+      if (optedOut) return;
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId);
+
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+      document.head.appendChild(tag);
+    }());
   </script>
+  </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
     <div class="container pt-5 allstuffp">
