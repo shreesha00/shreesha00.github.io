@@ -104,7 +104,15 @@
                 <p class="header pt-5">News</p>
 
 
-                <div class="py-2">
+                <div class="py-2" id="news-list">
+                    <div class="news-item my-2 pl-2">
+                        <span class="news-title">Gave a talk on <a href="#agilelog">AgileLog</a> to the systems group at UT Austin.</span>
+                        <span class="date">Oct 2026</span>
+                    </div>
+                    <div class="news-item my-2 pl-2">
+                        <span class="news-title">Presented <a href="#agilelog">AgileLog</a> at SOSP'26</span>
+                        <span class="date">Sep 2026</span>
+                    </div>
                     <div class="news-item my-2 pl-2">
                         <span class="news-title">Excited to speak about our work on forkable shared logs at Confluent Current 2026, San Francisco!</span>
                         <span class="date">Aug 2026</span>
@@ -158,6 +166,7 @@
                             <span class="date">October 2024</span>
                     </div>
                 </div>
+                <button class="news-toggle" id="news-toggle" type="button" aria-controls="news-list" aria-expanded="false" hidden>More</button>
 
 
                  <p class="header pt-5">Publications</p>
@@ -165,9 +174,11 @@
                     <p class="paper my-2 pl-2">
                         <span class="papertitle">AgileLog: A Forkable Shared Log for Agents on Streaming Data</span><br>
                         <span class="thisauthor">Shreesha G. Bhat</span>, Tony Hong, Michael Noguera, Aishwarya Ganesan, Ramnatthan Alagappan<br>
-                        <span class="conf"><a href="https://sigops.org/s/conferences/sosp/2026/">SOSP'26</a> | Symposium on Operating Systems Principles (to appear)</span><br>
+                        <span class="conf"><a href="https://sigops.org/s/conferences/sosp/2026/">SOSP'26</a> | Symposium on Operating Systems Principles</span><br>
                         <a class="tag" href="assets/papers/agilelog_sosp26.pdf" target="_blank">pdf</a><span class="tagsep">|</span>
-                        <a class="tag" href="https://github.com/dassl-uiuc/AgileLog-Proto" target="_blank">artifact</a><span id="agilelog-stars" class="github-stars"></span><br>
+                        <a class="tag" href="https://github.com/dassl-uiuc/AgileLog-Proto" target="_blank">artifact</a><span id="agilelog-stars" class="github-stars"></span><span class="tagsep">|</span>
+                        <a class="tag" href="assets/presentations/agilelog_sosp26.pdf" target="_blank">slides</a><span class="tagsep">|</span>
+                        <a class="tag" href="cites/agilelog_sosp26.bib" target="_blank">cite</a><br>
                     </p>
                 </div>
 
@@ -285,8 +296,14 @@
                 <!-- Invited Talks Section -->
                 <p class="header pt-5">Invited Talks</p>
                 <div class="py-2">
+                    <p class="paper my-2 pl-2">
+                        <span class="papertitle">AgileLog: A Forkable Shared Log for Agents on Data Streams</span>
+                    </p>
                     <p class="service-item my-2 pl-2">
-                        <span class="papertitle">Forkable Shared Logs: Enabling Testing, Analysis, and Agentic Workloads on Real-Time Data</span><br>
+                        Systems Group, University of Texas at Austin<br>
+                        <span class="date">October 12, 2026 | Austin, TX</span>
+                    </p>
+                    <p class="service-item my-2 pl-2">
                         Stream Processing with Apache Kafka, Samza, and Flink Meetup hosted by LinkedIn<br>
                         <span class="date">June 24, 2026 | Sunnyvale, CA + online</span>
                         <a class="tag" href="https://www.meetup.com/stream-processing-meetup-linkedin/events/315240242/" target="_blank">meetup event</a><span class="tagsep">|</span>
@@ -328,6 +345,7 @@
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="assets/news.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

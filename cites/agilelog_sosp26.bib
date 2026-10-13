@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3830418.3843875,
+author = {Bhat, Shreesha G. and Hong, Tony and Noguera, Michael A and Ganesan, Aishwarya and Alagappan, Ramnatthan},
+title = {AgileLog: A Forkable Shared Log for Agents on Data Streams},
+year = {2026},
+isbn = {9798400725852},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3830418.3843875},
+doi = {10.1145/3830418.3843875},
+abstract = {In modern data-streaming systems, alongside traditional programs, a new type of entity has emerged that can interact with streaming data: AI agents. Unlike traditional programs, AI agents use LLM reasoning to accomplish high-level tasks specified in natural language over streaming data. Unfortunately, current streaming systems cannot fully support agents: they lack the fundamental mechanisms to avoid the performance interference caused by agentic tasks and to safely handle agentic writes. We argue that the shared log, the core abstraction underlying streaming data, must support creating forks of itself, and that such a forkable shared log serves as a great substrate for agents acting on streaming data. We propose AgileLog, a new shared log abstraction that provides novel forking primitives for agentic use cases. We design Bolt, a system that implements the AgileLog abstraction. Bolt uses many novel techniques to make forks cheap and to provide logical and performance isolation.},
+booktitle = {Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles},
+pages = {412–429},
+numpages = {18},
+keywords = {Shared logs, data streaming, AI agents},
+location = {Prague, Czech Republic},
+series = {SOSP '26}
+}
